@@ -1,3 +1,7 @@
+////////////////////////////////////////////////
+Note: use asciidoc -a latexmath
+////////////////////////////////////////////////
+
 [[cha:5-axis-kinematics]] (((5-Axis Kinematics)))
 
 = 5-Axis Kinematics
@@ -43,17 +47,7 @@ $
 }
 \end{equation*}
 
-////////////////////////////////////////////////
-this is a comment
-latexmath:[$K$] breaks the html in my tests
-
-The latexmath::[$K$] vector is equivalent to the 3rd vector from the pose matrix $E_6$ that was used in the 6-axis robot kinematics [3] and the $Q$ vector is equivalent to the 4th vector of $E_6$. In MASTERCAM for example this information is contained in the intermediate output ".nci" file.
-
-
-the $E_6$  $Q$ $H$  etc render literally
-////////////////////////////////////////////////
-
-The XXX vector is equivalent to the 3rd vector from the pose matrix $E_6$ that was used in the 6-axis robot kinematics [3] and the $Q$ vector is equivalent to the 4th vector of $E_6$. In MASTERCAM for example this information is contained in the intermediate output ".nci" file.
+The $K$ vector is equivalent to the 3rd vector from the pose matrix $E_6$ that was used in the 6-axis robot kinematics [3] and the $Q$ vector is equivalent to the 4th vector of $E_6$. In MASTERCAM for example this information is contained in the intermediate output ".nci" file.
 
 .Cutter location data
 image::5-axis-figures/Figure-1.png[align="center",height=400]
