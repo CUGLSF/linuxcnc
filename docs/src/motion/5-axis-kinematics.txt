@@ -1,5 +1,5 @@
 ////////////////////////////////////////////////
-Note: use asciidoc -a latexmath
+Note: use asciidoc -a latexmath (works for html)
 ////////////////////////////////////////////////
 
 [[cha:5-axis-kinematics]] (((5-Axis Kinematics)))
@@ -47,14 +47,14 @@ $
 }
 \end{equation*}
 
-The $K$ vector is equivalent to the 3rd vector from the pose matrix $E_6$ that was used in the 6-axis robot kinematics [3] and the $Q$ vector is equivalent to the 4th vector of $E_6$. In MASTERCAM for example this information is contained in the intermediate output ".nci" file.
+The K vector is equivalent to the 3rd vector from the pose matrix E~6~ that was used in the 6-axis robot kinematics [3] and the Q vector is equivalent to the 4th vector of E~6~. In MASTERCAM for example this information is contained in the intermediate output ".nci" file.
 
 .Cutter location data
 image::5-axis-figures/Figure-1.png[align="center",height=400]
 
 == Translation and Rotation Matrices
 Homogenous transformations provide a simple way to describe the mathematics of
-multi-axis machine kinematics. A transformation of the space $H$ is a 4x4 matrix and can represent translation and rotation transformations. Given a point x,y,x described by a vector $u = [x,y,z,1]^T$, then its transformation $v$ is represented by the matrix product
+multi-axis machine kinematics. A transformation of the space H is a 4x4 matrix and can represent translation and rotation transformations. Given a point x,y,x described by a vector u = [x,y,z,1]^T, then its transformation v is represented by the matrix product
 [latex]
 \begin{equation*}
 v = H \cdot u
@@ -105,7 +105,7 @@ $
 }
 \end{equation*}
 
-The matrix $T(a,b,c)$ implies a translation in the $X, Y, Z$ coordinate directions by the amounts $a, b, c$ respectively. The $R$ matrices imply rotations of the angle $\theta$ about the $X, Y $ and $Z$ coordinate axes respectively. The 'C' and 'S' symbols refer to cosine and sine functions respectively.
+The matrix T(a,b,c) implies a translation in the X, Y, Z coordinate directions by the amounts a, b, c respectively. The R matrices imply rotations of the angle &Theta; about the X, Y and Z coordinate axes respectively. The 'C' and 'S' symbols refer to cosine and sine functions respectively.
 
 == Table Rotary/Tilting 5-Axis Configurations
 
@@ -129,7 +129,7 @@ We need to describe a relationship between the workpiece coordinate system and t
 
 where each matrix '^i-1^A~j~' is a translation matrix 'T' or a rotation matrix 'R' of the form (2,3).
 
-Matrix multiplication is a simple process in which the elements of each row of the lefthand matrix $A$ is multiplied by the elements of each column of the righthand matrix $B$ and summed to obtain an element in the result matrix $C$, ie.
+Matrix multiplication is a simple process in which the elements of each row of the lefthand matrix A is multiplied by the elements of each column of the righthand matrix B and summed to obtain an element in the result matrix C, ie.
 [latex]
 \begin{equation*}
 C_{ij} = \sum^n_{k=1,n} A_{ik} B_{kj}; \quad i=1,n; \quad j=1,n
@@ -209,7 +209,7 @@ $
 }
 \end{equation*}
 
-In these equations $L_x, L_y, L_z$ defines the offsets of the pivot point of the two rotary axes $A$ and $C$ relative to the workpiece coordinate system origin. Furthermore, $P_x, P_y, P_z$ are the relative  distances of the pivot point to the cutter tip position, which can also be called the "joint coordinates" of the pivot point. The pivot point is at the intersection of the two rotary axes. The signs of the $S_A$ and $S_C$ terms are different to those in [2,3] since there the table rotations are negative relative to the workpiece coordinate axes (note that $sin(-\theta) = -sin(\theta), cos(-\theta) = cos(\theta)$).
+In these equations L~x~, L~y~, L~z~ defines the offsets of the pivot point of the two rotary axes A and C relative to the workpiece coordinate system origin. Furthermore, P~x~, P~y~, P~z~ are the relative  distances of the pivot point to the cutter tip position, which can also be called the "joint coordinates" of the pivot point. The pivot point is at the intersection of the two rotary axes. The signs of the S~A~ and S~C~ terms are different to those in [2,3] since there the table rotations are negative relative to the workpiece coordinate axes (note that sin(-&Theta;) = -sin(&Theta;), cos(-&Theta;) = cos(&Theta;)).
 
 When multiplied in accordance with (5), we obtain:
 [latex]
@@ -228,7 +228,7 @@ $
 }
 \end{equation*}
 
-We can now equate the third column of this matrix with our given tool orientation vector $K$, ie.:
+We can now equate the third column of this matrix with our given tool orientation vector K, ie.:
 [latex]
 \begin{equation*}
 \mbox{
@@ -250,7 +250,7 @@ $
 }
 \end{equation*}
 
-From these equations we can solve for the rotation angles $\theta_A, \theta_C$. From the third row we find:
+From these equations we can solve for the rotation angles &Theta;~A~, &Theta;~C~. From the third row we find:
 [latex]
 \begin{equation*}
 \theta_A = cos^{-1}(K_z) \qquad (0 < \theta_A < \pi)
@@ -266,7 +266,7 @@ and by dividing the first row by the second row we find:
 
 These relationships are typically used in the CAM post-processor to convert the tool orientation vectors to rotation angles.
 
-Equating the last column of (8) with the tool position vector $Q$, we can write:
+Equating the last column of (8) with the tool position vector Q, we can write:
 [latex]
 \begin{equation*}
 \mbox{
@@ -337,7 +337,7 @@ which is the 'forward transformation' of the kinematics.
 
 ==== Inverse Transformation
 
-We can solve for $P$ from  equation (13) as 'P = (^Q^A~P~)^-1^$\cdot$ Q'. Noting that the square matrix is a homogenous 4x4 matrix containing a rotation matrix $R$ and translation vector $q$, for which the inverse can be written as:
+We can solve for P from  equation (13) as 'P = (^Q^A~P~)^-1^\cdot Q'. Noting that the square matrix is a homogenous 4x4 matrix containing a rotation matrix R and translation vector q, for which the inverse can be written as:
 
 [latex]
 \begin{equation*}
@@ -356,7 +356,7 @@ $
 }
 \end{equation*}
 
-where $R^T$ is the transpose of $R$ (rows and columns swappped). We therefore obtain:
+where R^T is the transpose of R (rows and columns swappped). We therefore obtain:
 
 [latex]
 \begin{equation*}
@@ -405,7 +405,7 @@ $
 .vismach model of xyzac-trt with rotational axis offsets (positive)
 image::5-axis-figures/Figure-5.png[align= "center"]
 
-We deal here with a extended configuration in which the tilting axis and rotary axis do not intersect at a point but have an offset $D_y$. Furthermore, there is also an z-offset between the two coordinate systems 'O~ws~' and 'O~wp~' of Fig. 2, called $D_z$. A vismach model is shown in Fig. 5 and the offsets are shown in Fig. 6 (positive offsets in this example). To simplify the configuration, the offsets $L_x, L_y, L_z$ of the previous case
+We deal here with a extended configuration in which the tilting axis and rotary axis do not intersect at a point but have an offset D~y~. Furthermore, there is also an z-offset between the two coordinate systems 'O~ws~' and 'O~wp~' of Fig. 2, called D~z~. A vismach model is shown in Fig. 5 and the offsets are shown in Fig. 6 (positive offsets in this example). To simplify the configuration, the offsets L~x~, L~y~, L~z~ of the previous case
  are not included. They are probably not necessary if one uses the G54 offsets in LinuxCNC by means of the "touch of" facility.
 
 .Table tilting/rotary xyzac-trt configuration, with axis offsets
@@ -468,7 +468,7 @@ $
 }
 \end{equation*}
 
-In these equations $D_y, D_z$ defines the offsets of the pivot point of the rotary axes $A$  relative to the workpiece coordinate system origin. Furthermore, $P_x, P_y, P_z$ are the relative  distances of the pivot point to the cutter tip position, which can also be called the "joint coordinates" of the pivot point. The pivot point is on the $A$ rotary axis.
+In these equations D~y~, D~z~ defines the offsets of the pivot point of the rotary axes A  relative to the workpiece coordinate system origin. Furthermore, P~x~, P~y~, P~z~ are the relative  distances of the pivot point to the cutter tip position, which can also be called the "joint coordinates" of the pivot point. The pivot point is on the A rotary axis.
 
 When multiplied in accordance with (18), we obtain:
 [latex]
@@ -487,7 +487,7 @@ $
 }
 \end{equation*}
 
-We can now equate the third column of this matrix with our given tool orientation vector $K$, ie.:
+We can now equate the third column of this matrix with our given tool orientation vector K, ie.:
 [latex]
 \begin{equation*}
 \mbox{
@@ -509,7 +509,7 @@ $
 }
 \end{equation*}
 
-From these equations we can solve for the rotation angles $\theta_A, \theta_C$. From the third row we find:
+From these equations we can solve for the rotation angles &Theta;~A~, &Theta;~C~. From the third row we find:
 [latex]
 \begin{equation*}
 \theta_A = cos^{-1}(K_z) \qquad (0 < \theta_A < \pi)
@@ -525,7 +525,7 @@ and by dividing the second row by the first row we find:
 
 These relationships are typically used in the CAM post-processor to convert the tool orientation vectors to rotation angles.
 
-Equating the last column of (21) with the tool position vector $Q$, we can write:
+Equating the last column of (21) with the tool position vector Q, we can write:
 [latex]
 \begin{equation*}
 \mbox{
@@ -580,7 +580,7 @@ which is the 'forward transformation' of the kinematics.
 
 ==== Inverse Transformation
 
-We can solve for $P$ from  equation (25) as 'P = (^Q^A~P~)^-1^$\cdot$ Q' using (15) as before.
+We can solve for P from  equation (25) as 'P = (^Q^A~P~)^-1^\cdot Q' using (15) as before.
 We thereby obtain:
 [latex]
 \begin{equation*}
@@ -629,7 +629,7 @@ $
 .vismach model of xyzbc-trt with rotational axis offsets (negative)
 image::5-axis-figures/Figure-7.png[align= "center"]
 
-We deal here again with a extended configuration in which the tilting axis (about the y-axis) and rotary axis do not intersect at a point but have an offset $D_x$. Furthermore, there is also an z-offset between the two coordinate systems 'O~ws~' and 'O~wp~' of Fig. 2, called $D_z$. A vismach model is shown in Fig. 7 (negative offsets in this example) and the positive offsets are shown in Fig. 8.
+We deal here again with a extended configuration in which the tilting axis (about the y-axis) and rotary axis do not intersect at a point but have an offset D~x~. Furthermore, there is also an z-offset between the two coordinate systems 'O~ws~' and 'O~wp~' of Fig. 2, called D~z~. A vismach model is shown in Fig. 7 (negative offsets in this example) and the positive offsets are shown in Fig. 8.
 
 .Table tilting/rotary xyzbc-trt configuration, with axis offsets
 image::5-axis-figures/Figure-8.png[align= "center",height=350]
@@ -688,7 +688,7 @@ $
 }
 \end{equation*}
 
-In these equations $D_x, D_z$ defines the offsets of the pivot point of the rotary axes $B$  relative to the workpiece coordinate system origin. Furthermore, $P_x, P_y, P_z$ are the relative  distances of the pivot point to the cutter tip position, which can also be called the "joint coordinates" of the pivot point. The pivot point is on the $B$ rotary axis.
+In these equations D~x~, D~z~ defines the offsets of the pivot point of the rotary axes B  relative to the workpiece coordinate system origin. Furthermore, P~x~, P~y~, P~z~ are the relative  distances of the pivot point to the cutter tip position, which can also be called the "joint coordinates" of the pivot point. The pivot point is on the B rotary axis.
 
 When multiplied in accordance with (29), we obtain:
 [latex]
@@ -707,7 +707,7 @@ $
 }
 \end{equation*}
 
-We can now equate the third column of this matrix with our given tool orientation vector $K$, ie.:
+We can now equate the third column of this matrix with our given tool orientation vector K, ie.:
 [latex]
 \begin{equation*}
 \mbox{
@@ -729,7 +729,7 @@ $
 }
 \end{equation*}
 
-From these equations we can solve for the rotation angles $\theta_B, \theta_C$. From the third row we find:
+From these equations we can solve for the rotation angles &Theta;~B~, &theta;~C~. From the third row we find:
 [latex]
 \begin{equation*}
 \theta_B = cos^{-1}(K_z) \qquad (0 < \theta_B < \pi)
@@ -745,7 +745,7 @@ and by dividing the second row by the first row we find:
 
 These relationships are typically used in the CAM post-processor to convert the tool orientation vectors to rotation angles.
 
-Equating the last column of (32) with the tool position vector $Q$, we can write:
+Equating the last column of (32) with the tool position vector Q, we can write:
 [latex]
 \begin{equation*}
 \mbox{
@@ -800,7 +800,7 @@ which is the 'forward transformation' of the kinematics.
 
 ==== Inverse Transformation
 
-We can solve for $P$ from  equation (37) as 'P = (^Q^A~P~)^-1^$\cdot$ Q'.  With the same approach as before, we obtain:
+We can solve for P from  equation (37) as 'P = (^Q^A~P~)^-1^\cdot Q'.  With the same approach as before, we obtain:
 [latex]
 \begin{equation*}
 \mbox{
@@ -941,7 +941,7 @@ KINEMATICS = kinsname
 
 where "kinsname" is the name of your kins program.  Additional HAL pins may
 be created by the module for variable configuration items such as
-the $D_x, D_y, D_z, tool-offset$ used in the xyzac-trt kinematics
+the D~x~, D~y~, D~z~, tool-offset used in the xyzac-trt kinematics
 module.   These pins can be connected to a signal for dynamic control
 or set once with HAL connections like:
 
