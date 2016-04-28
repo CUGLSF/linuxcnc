@@ -1,6 +1,7 @@
 ////////////////////////////////////////////////
 Note: use asciidoc -a latexmath (works for html)
 theta &#952;
+test with no theta code, use THETA
 ////////////////////////////////////////////////
 
 [[cha:5-axis-kinematics]] (((5-Axis Kinematics)))
@@ -106,7 +107,7 @@ $
 }
 \end{equation*}
 
-The matrix T(a,b,c) implies a translation in the X, Y, Z coordinate directions by the amounts a, b, c respectively. The R matrices imply rotations of the angle &#952; about the X, Y and Z coordinate axes respectively. The 'C' and 'S' symbols refer to cosine and sine functions respectively.
+The matrix T(a,b,c) implies a translation in the X, Y, Z coordinate directions by the amounts a, b, c respectively. The R matrices imply rotations of the angle THETA about the X, Y and Z coordinate axes respectively. The 'C' and 'S' symbols refer to cosine and sine functions respectively.
 
 == Table Rotary/Tilting 5-Axis Configurations
 
@@ -210,7 +211,7 @@ $
 }
 \end{equation*}
 
-In these equations L~x~, L~y~, L~z~ defines the offsets of the pivot point of the two rotary axes A and C relative to the workpiece coordinate system origin. Furthermore, P~x~, P~y~, P~z~ are the relative  distances of the pivot point to the cutter tip position, which can also be called the "joint coordinates" of the pivot point. The pivot point is at the intersection of the two rotary axes. The signs of the S~A~ and S~C~ terms are different to those in [2,3] since there the table rotations are negative relative to the workpiece coordinate axes (note that sin(-&#952;) = -sin(&#952;), cos(-&#952;) = cos(&#952;)).
+In these equations L~x~, L~y~, L~z~ defines the offsets of the pivot point of the two rotary axes A and C relative to the workpiece coordinate system origin. Furthermore, P~x~, P~y~, P~z~ are the relative  distances of the pivot point to the cutter tip position, which can also be called the "joint coordinates" of the pivot point. The pivot point is at the intersection of the two rotary axes. The signs of the S~A~ and S~C~ terms are different to those in [2,3] since there the table rotations are negative relative to the workpiece coordinate axes (note that sin(-THETA) = -sin(THETA), cos(-THETA) = cos(THETA)).
 
 When multiplied in accordance with (5), we obtain:
 [latex]
@@ -251,7 +252,7 @@ $
 }
 \end{equation*}
 
-From these equations we can solve for the rotation angles &#952;~A~, &#952;~C~. From the third row we find:
+From these equations we can solve for the rotation angles THETA~A~, THETA~C~. From the third row we find:
 [latex]
 \begin{equation*}
 \theta_A = cos^{-1}(K_z) \qquad (0 < \theta_A < \pi)
@@ -510,7 +511,7 @@ $
 }
 \end{equation*}
 
-From these equations we can solve for the rotation angles &#952;~A~, &#952;~C~. From the third row we find:
+From these equations we can solve for the rotation angles THETA~A~, THETA~C~. From the third row we find:
 [latex]
 \begin{equation*}
 \theta_A = cos^{-1}(K_z) \qquad (0 < \theta_A < \pi)
@@ -730,7 +731,7 @@ $
 }
 \end{equation*}
 
-From these equations we can solve for the rotation angles &#952;~B~, &#952;~C~. From the third row we find:
+From these equations we can solve for the rotation angles THETA~B~, THETA~C~. From the third row we find:
 [latex]
 \begin{equation*}
 \theta_B = cos^{-1}(K_z) \qquad (0 < \theta_B < \pi)
