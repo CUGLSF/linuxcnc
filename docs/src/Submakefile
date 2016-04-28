@@ -422,7 +422,7 @@ LMATHFILES = $(DOC_SRCDIR)/motion/5-axis-kinematics.txt
 
 lmath: $(LMATHFILES)
 	$(ECHO) Running a2x for $< to make png files
-	$(A2X) -L -d book -vf pdf $< || (X=$$?; rm $@; exit $$X)
+	$(A2X) -L -d book -vf pdf $< || (X=$$?; exit $$X)
 	$(ECHO) Making namelinks for png files for $< 
 	$(DOC_SRCDIR)/namelink.sh $< Master_Documentation
 
