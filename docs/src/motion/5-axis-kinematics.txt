@@ -1,8 +1,5 @@
 ////////////////////////////////////////////////
-Note: use asciidoc -a math (works for html)
-theta &#952;
-test with no theta code, use theta
-refer to png -- no latexmath
+useimage:: for equation png files -- no latexmath
 ////////////////////////////////////////////////
 
 [[cha:5-axis-kinematics]] (((5-Axis Kinematics)))
