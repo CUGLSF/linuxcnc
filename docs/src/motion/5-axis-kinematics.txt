@@ -397,7 +397,9 @@ Tools: C-H She, R-S Lee, J Manufacturing Processes, V2 N2, 2000.
 
  . NC Post-processor for 5-axis milling of table-rotating/tilting type: YH Jung,
 DW Lee, JS Kim, HS Mok, J Materials Processing Technology,130-131 (2002)
-641-646.  3D 6-DOF Serial Arm Robot Kinematics, RJ du Preez, SA-CNC-CLUB, Dec.
+641-646.
+
+ . 3D 6-DOF Serial Arm Robot Kinematics, RJ du Preez, SA-CNC-CLUB, Dec.
 5, 2013.
 
  . Design of a generic five-axis postprocessor based on generalized kinematics
