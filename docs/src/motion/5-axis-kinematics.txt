@@ -36,7 +36,7 @@ image::5-axis-figures/Figure-1.png[align="center",height=400]
 == Translation and Rotation Matrices
 
 Homogenous transformations provide a simple way to describe the mathematics of
-multi-axis machine kinematics. A transformation of the space H is a 4x4 matrix and can represent translation and rotation transformations. Given a point x,y,x described by a vector u = {x,y,z,1}~T~, then its transformation v is represented by the matrix product
+multi-axis machine kinematics. A transformation of the space H is a 4x4 matrix and can represent translation and rotation transformations. Given a point x,y,x described by a vector u = {x,y,z,1}^T^, then its transformation v is represented by the matrix product
 
 image::5-axis-figures/equation__2.png[align="center"]
 
